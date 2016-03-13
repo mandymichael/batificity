@@ -1,0 +1,199 @@
+body {
+  background: #111;
+  color: #fefefe;
+  font-family: 'Oswald', sans-serif;
+}
+
+section {
+  padding: 3em;
+  text-align: center;
+  min-height: 500px;
+  background-size: cover;
+  margin: 0 auto;
+  position: relative;
+  background-position: center center;
+}
+
+h2, h1 {
+  text-transform: uppercase;
+  letter-spacing: 0.062em;
+  font-size: 3rem;
+  margin: 0;
+  position: relative;
+}
+h2:after, h1:after {
+  content: "";
+  width: 100px;
+  height: 5px;
+  background: #fefefe;
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+h3 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin: 1.5rem 0;
+  letter-spacing: 0.0625em;
+  position: relative;
+}
+h3:after {
+  content: "?";
+  text-align: center;
+  width: 22px;
+  height: 22px;
+  font-size: .5em;
+  border: 2px solid #fff;
+  border-radius: 100%;
+  margin-left: .5em;
+  top: 0px;
+  line-height: 1.8;
+  position: absolute;
+}
+
+.button {
+  border: 2px solid #fff;
+  padding: .5em 2em;
+  background: none;
+  border-radius: .25em;
+  text-transform: uppercase;
+  font-weight: 300;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+  color: #fff;
+  text-decoration: none;
+}
+.button:hover {
+  background: #404040;
+}
+.button:focus {
+  outline: none;
+}
+
+p {
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.power {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.content {
+  width: 90%;
+  max-width: 500px;
+  position: absolute;
+  bottom: 4rem;
+  padding: 2em;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-transition: opacity 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out;
+}
+@media screen and (min-width: 500px) {
+  .content {
+    opacity: 0;
+  }
+}
+
+.inview {
+  opacity: 1;
+}
+
+.intro {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/Batificity.jpg");
+}
+.intro p {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+.intro p:after {
+  content: "?";
+  text-align: center;
+  width: 22px;
+  height: 22px;
+  font-size: .5em;
+  border: 2px solid #fff;
+  border-radius: 100%;
+  margin-left: .5em;
+  bottom: 0;
+  line-height: 1.8;
+  position: absolute;
+}
+
+#gotham {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/gotham.jpg");
+}
+
+#batman {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/batman.jpg");
+  background-position: bottom right;
+}
+
+#robin {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/batman-and-robin-new-52-12-robins.jpg");
+}
+
+#batmobile {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/batmobile.jpg");
+}
+
+#alfred {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/alfred.jpg");
+}
+
+#utility-belt {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/alfred-helps-himself.jpg");
+}
+
+#bruce-wayne {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/bruce-wayne.jpg");
+}
+
+#the-bomb {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/kaboom-night.jpg");
+}
+
+.modal {
+  display: none;
+  box-sizing: border-box;
+  padding: 2em 3em;
+  width: 100%;
+  max-width: 700px;
+  min-height: 100%;
+  background: #111;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  position: fixed;
+  text-align: center;
+}
+@media screen and (min-width: 500px) {
+  .modal {
+    max-height: 400px;
+    min-height: auto;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+.modal h2 {
+  font-size: 2em;
+}
+.modal p {
+  font-size: 1.25em;
+}
+
+.code {
+  font-family: 'Droid Sans Mono', sans-serif;
+  font-size: .85em;
+}

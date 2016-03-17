@@ -1,8 +1,7 @@
-# Batificity
->Not the css specificity guide you deserve,
->but the one you need right now.
+#Batificity
+##Not the css specificity guide you deserve, but the one you need right now.
 
-###What is specificity
+###WHAT IS SPECIFICITY?
 Specificity determines which CSS rule is applied by the browser.
 
 Rules with more specific selectors have a greater specificity, if two selectors apply to the same element, the one with higher specificity wins.

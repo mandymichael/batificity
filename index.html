@@ -4,7 +4,6 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="description" content="Not the css specificity guide you deserve, but the one you need right now." />
-
 		<meta name="title" content="Batificity - A guide to CSS Specificity" />
 
 		<!-- Social Media Data -->
@@ -25,6 +24,18 @@
 			</div>
 		</section>
 
+		<!-- Inline Styles -->
+		<div id="batificity-modal" class="modal">
+			<div class="modal__content">
+				<h2>What is Specificity?</h2>
+				<p>Specificity determines which CSS rule is applied by the browser.</p>
+				<p>Rules with more specific selectors have a greater specificity, if two selectors apply to the same element, the one with higher specificity wins.</p>
+				<p>When selectors have an equal weight, the last rule defined is the one that counts.</p>
+				<p>Combinators ( +, >, ~ ) allow for more specific targeting, but do not increase specificity.</p>
+				<button class="button">Got it!</button>
+			</div>
+		</div>
+
 		<section id="gotham">
 			<div class="content">
 				<h2>Gotham</h2>
@@ -32,6 +43,16 @@
 				<p>The place containing the many things that make up Gotham&nbsp;City.</p>
 			</div>
 		</section>
+
+		<!-- Modal -->
+		<div id="gotham-modal" class="modal">
+			<div class="modal__content">
+				<h2>What is the page?</h2>
+				<p>The page is your html document where your html and selectors exist.</p>
+				<p>CSS specificity applies in the context of that&nbsp;page.</p>
+				<button class="button">Got it!</button>
+			</div>
+		</div>
 
 		<section id="batman">
 			<div class="content">
@@ -43,6 +64,16 @@
 			</div>
 		</section>
 
+		<!-- Batman Modal -->
+		<div id="batman-modal" class="modal">
+			<div class="modal__content">
+				<h2>More about IDs</h2>
+				<p>An ID is an identifier for your page elements, such as #div. ID selectors have a higher specificity than other selectors.</p>
+				<p>For example, the selector <span class="code">#batman</span> is more specific than the attribute selector <span class="code">[id=batman]</span> or the class selector <span class="code">.robin</span></p>
+				<button class="button">Got it!</button>
+			</div>
+		</div>
+
 		<section id="robin">
 			<div class="content">
 				<h2>.robin</h2>
@@ -53,6 +84,17 @@
 				<p class="power">Strength <span>0:1:0</span></p>
 			</div>
 		</section>
+
+		<!-- Classes/Robin Modal -->
+		<div id="robin-modal" class="modal">
+			<div class="modal__content">
+				<h2>More about Classes</h2>
+				<p>You can have more than one of the same class per page. Classes have the same specificity as pseudo elements and attribute selectors, but a lower specificity than an ID.</p>
+				<p>Classes can be chained to increase specificity (but this will not override an ID).<br>
+					<span class="code">.robin</span> gives you a strength of 0:1:0<br><span class="code">.robin.red-hood</span> would give you a strength of 0:2:0</p>
+				<button class="button">Got it!</button>
+			</div>
+		</div>
 
 		<section id="batmobile">
 			<div class="content">
@@ -66,6 +108,16 @@
 			</div>
 		</section>
 
+		<!-- Batmobile/Attributes Modal -->
+		<div id="batmobile-modal" class="modal">
+			<div class="modal__content">
+				<h2>More about Attributes</h2>
+				<p>An attribute selector matches elements which have a specific attribute or its value for&nbsp;example:
+					<span class="code">a[title]</span> matches all a-elements which have a title attribute.</p>
+				<p>Attribute selectors have the same weight as classes and pseudo-elements/classes.</p>
+				<button class="button">Got it!</button>
+			</div>
+		</div>
 
 		<section id="utility-belt">
 			<div class="content">
@@ -76,6 +128,16 @@
 			</div>
 		</section>
 
+		<!-- Utility belt Modal -->
+		<div id="utility-belt-modal" class="modal">
+			<div class="modal__content">
+				<h2>More about pseudo-elements/classes</h2>
+				<p>Pseudo classes are special classes that are used to define the behavior of HTML elements: e.g. <span class="code">a:hover</span> applys on hover of an element.</p>
+				<p>Pseudo-elements allow you to assign styles to content that does not exist in the page. e.g. <span class="code">.batman:after</span> adds an additional element you can style. The question marks on this page are pseudo elements.</p>
+				<button class="button">Got it!</button>
+			</div>
+		</div>
+
 		<section id="alfred">
 			<div class="content">
 				<h2>&lt;Alfred&gt;</h2>
@@ -84,6 +146,17 @@
 				<p class="power">Strength <span>0:0:1</span></p>
 			</div>
 		</section>
+
+		<!-- Alfred/Elements Modal -->
+		<div id="alfred-modal" class="modal">
+			<div class="modal__content">
+				<h2>More about element tags</h2>
+				<p>An element selector is the element that is linked to a particular style. e.g. <span class="code">a</span> targets the link tag&nbsp;directly.</p>
+				<p>These have the lowest specificity weight and are therefore the easiest to&nbsp;override.</p>
+				<p>The <span class="code">a</span> selector has a weight of 0:0:1 whereas <span class="code">a.robin</span> has a weight of 0:1:1, which is still lower than&nbsp;an&nbsp;ID.</p>
+				<button class="button">Got it!</button>
+			</div>
+		</div>
 
 		<section id="bruce-wayne">
 			<div class="content">
@@ -95,6 +168,17 @@
 			</div>
 		</section>
 
+		<!-- Bruce Wayne/Inline Styles Modal -->
+		<div id="bruce-wayne-modal" class="modal">
+			<div class="modal__content">
+				<h2>Inline Styles</h2>
+				<p>An inline style lives directly within your page and is attached to the element to be styled. For&nbsp;example:<br>
+					<span class="code">&lt;div style="background:red;"&gt;&lt;/div&gt;</span></p>
+				<p>Because inline styles exist directly on the element they override IDs, classes, pseudo-elements and attributes.</p>
+				<button" class="button">Got it!</button>
+			</div>
+		</div>
+
 		<section id="the-bomb">
 			<div class="content">
 				<h2>The Bomb</h2>
@@ -104,86 +188,15 @@
 			</div>
 		</section>
 
-
-		<!-- Modals -->
-		<div id="gotham-modal" class="modal">
-			<h2>What is the page?</h2>
-			<p>The page is your html document where your html and selectors exist.</p>
-			<p>CSS specificity applies in the context of that&nbsp;page.</p>
-			<a href="#gotham" class="button">Got it!</a>
-		</div>
-
-		<!-- IDs -->
-		<div id="batman-modal" class="modal">
-			<h2>More about IDs</h2>
-			<p>An ID is an identifier for your page elements, such as #div. ID selectors have a higher specificity than other selectors.</p>
-			<p>For example, the selector <span class="code">#batman</span> is more specific than the attribute selector <span class="code">[id=batman]</span> or the class selector <span class="code">.robin</span></p>
-			<a href="#batman" class="button">Got it!</a>
-		</div>
-
-		<!-- Classes -->
-		<div id="robin-modal" class="modal">
-			<h2>More about Classes</h2>
-			<p>You can have more than one of the same class per page. Classes have the same specificity as pseudo elements and attribute selectors, but a lower specificity than an ID.</p>
-			<p>Classes can be chained to increase specificity (but this will not override an ID).<br>
-				<span class="code">.robin</span> gives you a strength of 0:1:0<br><span class="code">.robin.red-hood</span> would give you a strength of 0:2:0</p>
-			<a href="#robin" class="button">Got it!</a>
-		</div>
-
-		<!-- attributes -->
-		<div id="batmobile-modal" class="modal">
-			<h2>More about Attributes</h2>
-			<p>An attribute selector matches elements which have a specific attribute or its value for&nbsp;example:
-				<span class="code">a[title]</span> matches all a-elements which have a title attribute.</p>
-			<p>Attribute selectors have the same weight as classes and pseudo-elements/classes.</p>
-			<a href="#batmobile" class="button">Got it!</a>
-		</div>
-
-		<!-- Utility belt -->
-		<div id="utility-belt-modal" class="modal">
-			<h2>More about pseudo-elements/classes</h2>
-			<p>Pseudo classes are special classes that are used to define the behavior of HTML elements: e.g. <span class="code">a:hover</span> applys on hover of an element.</p>
-			<p>Pseudo-elements allow you to assign styles to content that does not exist in the page. e.g. <span class="code">.batman:after</span> adds an additional element you can style. The question marks on this page are pseudo elements.</p>
-			<a href="#utility-belt" class="button">Got it!</a>
-		</div>
-
-		<!-- elements -->
-		<div id="alfred-modal" class="modal">
-			<h2>More about element tags</h2>
-			<p>An element selector is the element that is linked to a particular style. e.g. <span class="code">a</span> targets the link tag&nbsp;directly.</p>
-			<p>These have the lowest specificity weight and are therefore the easiest to&nbsp;override.</p>
-			<p>The <span class="code">a</span> selector has a weight of 0:0:1 whereas <span class="code">a.robin</span> has a weight of 0:1:1, which is still lower than&nbsp;an&nbsp;ID.</p>
-			<a href="#alfred" class="button">Got it!</a>
-		</div>
-
-
-		<!-- Inline Styles -->
-		<div id="bruce-wayne-modal" class="modal">
-			<h2>Inline Styles</h2>
-			<p>An inline style lives directly within your page and is attached to the element to be styled. For&nbsp;example:<br>
-				<span class="code">&lt;div style="background:red;"&gt;&lt;/div&gt;</span></p>
-			<p>Because inline styles exist directly on the element they override IDs, classes, pseudo-elements and attributes.</p>
-			<a href="#bruce-wayne" class="button">Got it!</a>
-		</div>
-
-		<!-- Inline Styles -->
-		<div id="batificity-modal" class="modal">
-			<h2>What is Specificity?</h2>
-			<p>Specificity determines which CSS rule is applied by the browser.</p>
-			<p>Rules with more specific selectors have a greater specificity, if two selectors apply to the same element, the one with higher specificity wins.</p>
-			<p>When selectors have an equal weight, the last rule defined is the one that counts.</p>
-			<p>Combinators ( +, >, ~ ) allow for more specific targeting, but do not increase specificity.</p>
-			<a href="#batificity" class="button">Got it!</a>
-		</div>
-
-
 		<!-- Important-->
 		<div id="the-bomb-modal" class="modal">
-			<h2>What is !Important?</h2>
-			<p>!important takes highest precendence, even over inline styles.</p>
-			<p>To override you have to declare another style using !important with the same or higher specificity. For this reason you should only be using !important for debugging.</p>
-			<p>If you are using !important regulary you should revisit your css specificity. It is incredibly rare to need it in your stylesheets.</p>
-			<a href="#the-bomb" class="button">Got it!</a>
+			<div class="modal__content">
+				<h2>What is !Important?</h2>
+				<p>!important takes highest precendence, even over inline styles.</p>
+				<p>To override you have to declare another style using !important with the same or higher specificity. For this reason you should only be using !important for debugging.</p>
+				<p>If you are using !important regulary you should revisit your css specificity. It is incredibly rare to need it in your stylesheets.</p>
+				<button class="button">Got it!</button>
+			</div>
 		</div>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>

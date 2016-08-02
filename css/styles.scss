@@ -14,7 +14,7 @@ section {
 	background-position: center center;
 }
 
-h2, h1 {
+h1, h2 {
 	text-transform: uppercase;
 	letter-spacing: 0.062em;
 	font-size: 3rem;
@@ -55,9 +55,19 @@ h3 {
 	}
 }
 
+p {
+	font-weight: 300;
+	font-size: 1.5rem;
+}
+
+a {
+	display: inline-block;
+	margin: 1em;
+}
+
 .button {
 	border: 2px solid #fff;
-	padding: .5em 2em;
+	padding: 1em 2em;
 	background: none;
 	border-radius: .25em;
 	text-transform: uppercase;
@@ -73,11 +83,6 @@ h3 {
 	&:focus {
 		outline: none;
 	}
-}
-
-p {
-	font-weight: 300;
-	font-size: 1.5rem;
 }
 
 .power {
@@ -97,8 +102,7 @@ p {
 	transition: opacity 250ms ease-in-out;
 
 	@media screen and (min-width: 500px) {
-			opacity: 0;
-
+		opacity: 0;
 	}
 }
 
@@ -108,7 +112,6 @@ p {
 
 .intro {
 	background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/Batificity.jpg');
-
 
 	p {
 		max-width: 400px;
@@ -135,7 +138,6 @@ p {
 
 #gotham {
 	background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/gotham.jpg');
-
 }
 
 #batman {
@@ -168,25 +170,13 @@ p {
 }
 
 .modal {
-	display: none;
 	box-sizing: border-box;
-	padding: 2em 3em;
 	width: 100%;
-	max-width: 700px;
-	min-height: 100%;
 	background: #111;
-	top: 0;
-	left: 50%;
-	transform: translate(-50%, 0);
-	position: fixed;
+	position: relative;
 	text-align: center;
-
-	@media screen and (min-width:500px) {
-		max-height: 400px;
-		min-height: auto;
-		top: 50%;
-		transform: translate(-50%, -50%);
-	}
+	max-height: 0;
+	transition: max-height .5s ease;
 
 	h2 {
 		font-size: 2em;
@@ -194,6 +184,14 @@ p {
 
 	p {
 		font-size: 1.25em;
+	}
+
+	&.is-open {
+		max-height: 600px;
+	}
+
+	.modal__content {
+		padding: 3em;
 	}
 
 }

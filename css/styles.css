@@ -149,7 +149,7 @@ a {
   .modal p {
     font-size: 1.25em; }
   .modal.is-open {
-    max-height: 600px; }
+    max-height: 1000px; }
   .modal .modal__content {
     padding: 3em; }
 
